@@ -1,3 +1,5 @@
+import UserCard from "./UserCard";
+
 function UserList({ users }) {
   return (
     <div className="user-list">

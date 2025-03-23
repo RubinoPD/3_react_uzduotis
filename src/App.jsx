@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import SearchBar from "./components/SearchBar";
 import UserList from "./components/UserList";
+import UserCard from "./components/UserCard";
 import "./App.css";
 
 function App() {
@@ -92,3 +93,4 @@ function App() {
     </div>
   );
 }
+export default App;

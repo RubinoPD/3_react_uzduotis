@@ -100,6 +100,6 @@ Sukurti React programėlę, kuri leidžia ieškoti naudotojų pagal vardą ir ro
 - Kraunami duomenys: Rodoma "Kraunami duomenys..." kol gaunami naudotojai
 - Nėra rezultatų: Rodoma "Nerasta jokių naudotojų" kai filtras negrąžina jokių rezultatų
 
-## Kūrėjas
+---
 
 Sukurta pagal užduotį, naudojant React ir Vite technologijas.

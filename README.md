@@ -16,6 +16,8 @@ Sukurti React programėlę, kuri leidžia ieškoti naudotojų pagal vardą ir ro
 - Rodyti žinutę, jei rezultatų nėra.
 - Įdiegti paprastą loading būseną (useEffect).
 
+---
+
 # Naudotojų paieškos programėlė
 
 Ši React programėlė leidžia efektyviai ieškoti naudotojų sąraše pagal vardą. Projektas demonstruoja React optimizacijos technikas, įskaitant `useMemo`, `useCallback` ir `React.memo`.

@@ -1,4 +1,4 @@
-import "./App.css";
+import "../App.css";
 
 function SearchBar({ searchTerm, onSearch, onClear }) {
   return (

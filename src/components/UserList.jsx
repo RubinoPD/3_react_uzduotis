@@ -1,5 +1,5 @@
 import UserCard from "./UserCard";
-import "./App.css";
+import "../App.css";
 
 function UserList({ users }) {
   return (

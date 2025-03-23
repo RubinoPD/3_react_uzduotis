@@ -34,7 +34,7 @@ function App() {
               };
             }
           );
-          fetchUsers = [...fetchUsers, ...additionalUsers];
+          fetchUsers = [...fetchedUsers, ...additionalUsers];
         }
         setUsers(fetchUsers);
       } catch (error) {

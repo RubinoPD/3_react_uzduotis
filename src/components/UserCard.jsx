@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import "./App.css";
+import React, { useMemo } from "react";
+import "../App.css";
 
 const UserCard = React.memo(({ user }) => {
   return (

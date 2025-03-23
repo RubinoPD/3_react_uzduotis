@@ -1,42 +1,140 @@
-#root {
-  max-width: 1280px;
+/* Bendras puslapio stilius */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+.app {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Paieškos juostos stilius */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.search-bar input {
+  width: 50%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.clear-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.clear-button:hover {
+  background-color: #c0392b;
+}
+
+/* Naudotojų sąrašo stilius */
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Naudotojo kortelės stilius */
+.user-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.user-card p {
+  margin: 8px 0;
+  color: #7f8c8d;
+}
+
+/* Kraunasi ir nėra rezultatų būsenų stilius */
+.loading,
+.no-results {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #7f8c8d;
+}
+
+.loading {
+  position: relative;
+}
+
+.loading:after {
+  content: "...";
+  animation: dots 1.5s infinite;
+  display: inline-block;
+  width: 20px;
+  text-align: left;
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    content: ".";
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    content: "..";
+  }
+  60%,
+  100% {
+    content: "...";
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Mobilieji įrenginiai */
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .search-bar input {
+    width: 100%;
+  }
 
-.read-the-docs {
-  color: #888;
+  .user-list {
+    grid-template-columns: 1fr;
+  }
 }

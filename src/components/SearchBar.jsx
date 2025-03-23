@@ -1,3 +1,5 @@
+import "./App.css";
+
 function SearchBar({ searchTerm, onSearch, onClear }) {
   return (
     <div className="search-bar">

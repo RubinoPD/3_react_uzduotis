@@ -15,3 +15,4 @@ function SearchBar({ searchTerm, onSearch, onClear }) {
     </div>
   );
 }
+export default SearchBar;

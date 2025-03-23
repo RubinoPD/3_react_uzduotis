@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
+import SearchBar from "./components/SearchBar";
+import UserList from "./components/UserList";
 import "./App.css";
 
 function App() {

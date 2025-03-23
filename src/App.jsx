@@ -11,7 +11,7 @@ function App() {
 
   // Naudotoju duomenu gavimas
   useEffect(() => {
-    const fetchUsers = async () => {
+    const getUserData = async () => {
       setIsLoading(true);
       try {
         // Bandome gauti duomenis is API
@@ -21,11 +21,11 @@ function App() {
         let fetchedUsers = await response.json();
 
         // Jei API grazina maziau nei 100 naudotoju, sugeneruojame papildomus
-        if (fetchUsers.length < 100) {
+        if (fetchedUsers.length < 100) {
           const additionalUsers = Array.from(
-            { length: 100 - fetchUsers.length },
+            { length: 100 - fetchedUsers.length },
             (_, i) => {
-              const id = fetchUsers.length + i + 1;
+              const id = fetchedUsers.length + i + 1;
               return {
                 id,
                 name: `User ${id}`,
@@ -34,9 +34,9 @@ function App() {
               };
             }
           );
-          fetchUsers = [...fetchedUsers, ...additionalUsers];
+          fetchedUsers = [...fetchedUsers, ...additionalUsers];
         }
-        setUsers(fetchUsers);
+        setUsers(fetchedUsers);
       } catch (error) {
         console.error("Error fetching users:", error);
 
@@ -56,7 +56,7 @@ function App() {
       }
     };
 
-    fetchUsers();
+    getUserData();
   }, []);
 
   // Optimizuota paieskos funkcija su useCallback
